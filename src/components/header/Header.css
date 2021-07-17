@@ -1,0 +1,160 @@
+.logo {
+  height: 40px;
+}
+
+.links a {
+  text-decoration: none !important;
+  position: relative;
+}
+
+.links a .line-up,
+.links a .line-down {
+  position: absolute;
+  width: 1.5px;
+  height: 8px;
+  left: -7px;
+  background-color: #000;
+}
+
+.links a .line-up {
+  top: 0;
+}
+
+.links a .line-down {
+  bottom: 0;
+}
+
+.links .not-active::before,
+.links .not-active::after {
+  content: '';
+  position: absolute;
+  width: 1.5px;
+  height: 8px;
+  left: -7px;
+  background-color: #000;
+  opacity: 0;
+  transition: .3s;
+}
+
+.links .not-active::before {
+  top: -5px;
+}
+
+.links .not-active::after {
+  bottom: -5px;
+}
+
+
+.links .not-active:hover::before,
+.links .not-active:hover::after {
+  opacity: 1;
+}
+
+.links .not-active:hover::before {
+  top: 0;
+}
+
+.links .not-active:hover::after {
+  bottom: 0;
+}
+
+.box-socmed,
+.box-sidebar {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+}
+
+.box-sidebar {
+  font-size: 1.5em;
+}
+
+.box-socmed .box-visit {
+  width: 50px;
+  height: 30px;
+  background-color: #000;
+  border-radius: 0 0 8px 8px;
+  color: #fff;
+  padding-top: 2em;
+  padding-bottom: 1em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+
+  position: absolute;
+  bottom: -25px;
+}
+
+.menu-sidebar a:hover {
+  background-color: rgba(0, 0, 0, .1);
+  text-decoration: none;
+}
+
+.wrapper-box-sidebar {
+  user-select: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wrapper-box-sidebar:active,
+.wrapper-box-sidebar:focus,
+.wrapper-box-sidebar:visited,
+.wrapper-box-sidebar:link {
+  background-color: none !important;
+  user-select: none !important;
+}
+
+.button-to-top{
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+  z-index: 2;
+  bottom: 15px;
+  right: 15px;
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+  .wrapper-box-sidebar {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width:1200px) {
+  .wrapper-box-sidebar {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px) {
+
+  .links,
+  .links-socmed {
+    display: none !important;
+  }
+
+  .wrapper-box-sidebar {
+    display: flex !important;
+  }
+}
+
+@media only screen and (max-width:767px) {
+
+  .links,
+  .links-socmed {
+    display: none !important;
+  }
+
+  .wrapper-box-sidebar {
+    display: flex !important;
+  }
+}
